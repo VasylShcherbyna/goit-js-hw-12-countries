@@ -1,30 +1,33 @@
 {
-  "name": "goit-js-hw-10-food-service",
+  "name": "goit-js-hw-12-countries",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url /goit-js-hw-10-food-service/",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-
+    "build": "parcel build src/index.html --public-url /goit-js-hw-12-countries/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VasylShcherbyna/goit-js-hw-10-food-service.git"
+    "url": "git+https://github.com/olenaLa/goit-js-hw-12-countries.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VasylShcherbyna/goit-js-hw-10-food-service/issues"
+    "url": "https://github.com/olenaLa/goit-js-hw-12-countries/issues"
   },
-  "homepage": "https://vasylshcherbyna.github.io/goit-js-hw-10-food-service/",
+  "homepage": "https://olenaLa.github.io/goit-js-hw-12-countries",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
-    "parcel-plugin-handlebars-precompile": "^1.0.2"
+    "parcel-bundler": "^1.12.4",
+    "pnotify": "^5.2.0"
   },
   "dependencies": {
-    "gh-pages": "^3.2.0"
+    "gh-pages": "^3.1.0",
+    "lodash.debounce": "^4.0.8",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1"
   }
 }
