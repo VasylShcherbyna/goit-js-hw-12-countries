@@ -1,13 +1,13 @@
-import API from './fetchCountries';
-import error from './error-message.js';
-import getRefs from './get-refs.js';
-import countryCardTpl from '../templates/country-card.hbs'
-import countriesListTpl from '../templates/countries-list.hbs';
+import API from "./fetchCountries";
+import error from "./error-message.js";
+import getRefs from "./get-refs.js";
+import countryCardTpl from "../templates/country-card.hbs";
+import countriesListTpl from "../templates/countries-list.hbs";
 
 const refs = getRefs();
-const debounce = require('lodash.debounce');
+const debounce = require("lodash.debounce");
 
-refs.searchForm.addEventListener('input', debounce(onInput, 500));
+refs.searchForm.addEventListener("input", debounce(onInput, 500));
 
 function renderCountryListMarkup(data) {
   const markup = countriesListTpl(data);
@@ -20,7 +20,7 @@ function renderCountryCardMarkup(data) {
 }
 
 function clearMarkup() {
-  refs.cardContainer.innerHTML = '';
+  refs.cardContainer.innerHTML = "";
 }
 
 function onInput(evt) {
@@ -32,10 +32,10 @@ function onInput(evt) {
     return;
   }
 
-    API.fetchCountries(searchQuery)
-        .then(renderCountryCard)
-        .catch(error.onFetchError)
-        .finally(clearMarkup());
+  API.fetchCountries(searchQuery)
+    .then(renderCountryCard)
+    .catch(error.onFetchError)
+    .finally(clearMarkup());
 }
 
 function renderCountryCard(data) {
@@ -65,5 +65,5 @@ function renderCountryCardMarkup(data) {
 }
 
 function clearMarkup() {
-  refs.cardContainer.innerHTML = '';
+  refs.cardContainer.innerHTML = "";
 }

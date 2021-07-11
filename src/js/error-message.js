@@ -1,13 +1,16 @@
-import {error} from '@pnotify/core';
+import { error } from "@pnotify/core";
 import getRefs from "./get-refs.js";
 
 function matchesError() {
-    error(`Too many matches found.
-    Please enter a more specific query!`, 1000);
-  }
+  error(
+    `Знайдено забагато збігів.
+    Введіть більш конкретний запит!`,
+    1000
+  );
+}
 
 function onFetchError() {
-  error(`No such country. Please enter another query!`, 1000);
+  error(`Жодної такої країни. Введіть ще один запит!`, 1000);
 }
 
 function hideError() {
